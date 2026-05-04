@@ -422,6 +422,50 @@ h3 {
   border-radius: var(--radius);
 }
 
+.quick-info-section {
+  background: var(--white);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  min-height: 132px;
+  padding: 22px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.info-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 750;
+}
+
+.info-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.18rem;
+  line-height: 1.28;
+}
+
+.source-line {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+.source-line a {
+  color: var(--primary);
+  font-weight: 800;
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
@@ -608,7 +652,8 @@ textarea:focus {
     min-height: 420px;
   }
 
-  .services-grid {
+  .services-grid,
+  .info-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -621,6 +666,7 @@ textarea:focus {
   .trust-strip,
   .quick-actions,
   .services-grid,
+  .info-grid,
   .appointment-form {
     grid-template-columns: 1fr;
   }
