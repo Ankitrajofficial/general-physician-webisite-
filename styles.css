@@ -684,6 +684,11 @@ textarea:focus {
     height: 360px;
   }
 
+  .hero-media,
+  .doctor-image {
+    order: -1;
+  }
+
   .time-row,
   .contact-band,
   .site-footer {
