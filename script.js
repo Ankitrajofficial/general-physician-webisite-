@@ -16,12 +16,30 @@ navLinks.forEach((link) => {
   });
 });
 
+const CLINIC_WHATSAPP_NUMBER = "916205593020";
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const data = new FormData(form);
-  const patientName = data.get("name").toString().trim();
+  const patientName = (data.get("name") || "").toString().trim();
+  const phone = (data.get("phone") || "").toString().trim();
+  const reason = (data.get("reason") || "").toString().trim();
+  const date = (data.get("date") || "").toString().trim();
+  const message = (data.get("message") || "").toString().trim();
 
-  statusMessage.textContent = `Thank you, ${patientName}. The clinic team will call you shortly to confirm the visit.`;
+  const lines = [
+    "*New Appointment Request*",
+    `Name: ${patientName}`,
+    `Phone: ${phone}`,
+    `Reason: ${reason}`,
+    `Preferred date: ${date}`,
+  ];
+  if (message) lines.push(`Message: ${message}`);
+
+  const whatsappUrl = `https://wa.me/${CLINIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+
+  statusMessage.textContent = `Thank you, ${patientName}. Opening WhatsApp to send your appointment request to the clinic team.`;
+  window.open(whatsappUrl, "_blank", "noopener");
   form.reset();
 });
