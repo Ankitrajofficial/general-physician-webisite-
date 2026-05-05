@@ -572,6 +572,223 @@ textarea:focus {
   font-weight: 750;
 }
 
+.specialities-section {
+  background: var(--soft);
+}
+
+.specialities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.speciality-card {
+  position: relative;
+  padding: 26px 24px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(23, 33, 38, 0.05);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.speciality-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(15, 118, 110, 0.4);
+  box-shadow: 0 18px 44px rgba(15, 118, 110, 0.12);
+}
+
+.speciality-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.speciality-icon {
+  display: inline-grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  color: var(--primary);
+  background: #e2f3f1;
+  border-radius: var(--radius);
+}
+
+.speciality-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.testimonials-section {
+  background: var(--white);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 26px 24px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.testimonial-card p {
+  margin: 0;
+  color: #2c3a40;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.testimonial-card footer {
+  display: grid;
+  gap: 2px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+
+.testimonial-card footer strong {
+  font-size: 0.98rem;
+}
+
+.testimonial-card footer span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.rating {
+  color: var(--amber);
+  font-size: 1.05rem;
+  letter-spacing: 2px;
+}
+
+.tips-section {
+  background: var(--soft);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tip-card {
+  padding: 22px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 22px rgba(23, 33, 38, 0.04);
+}
+
+.tip-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.tip-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  color: var(--primary-dark);
+  background: #e2f3f1;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tip-card h3 {
+  margin: 12px 0 8px;
+}
+
+.faq-section {
+  background: var(--white);
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.faq-list details {
+  padding: 4px 22px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.faq-list details[open] {
+  background: var(--white);
+  border-color: rgba(15, 118, 110, 0.32);
+  box-shadow: 0 12px 30px rgba(23, 33, 38, 0.06);
+}
+
+.faq-list summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-icon {
+  position: relative;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+}
+
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--primary);
+  transform: translate(-50%, -50%);
+  transition: transform 180ms ease;
+}
+
+.faq-icon::before {
+  width: 10px;
+  height: 2px;
+}
+
+.faq-icon::after {
+  width: 2px;
+  height: 10px;
+}
+
+.faq-list details[open] .faq-icon::after {
+  transform: translate(-50%, -50%) scaleY(0);
+}
+
+.faq-list details p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
 .contact-band {
   display: flex;
   justify-content: space-between;
@@ -653,7 +870,10 @@ textarea:focus {
   }
 
   .services-grid,
-  .info-grid {
+  .info-grid,
+  .specialities-grid,
+  .testimonials-grid,
+  .tips-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -667,6 +887,9 @@ textarea:focus {
   .quick-actions,
   .services-grid,
   .info-grid,
+  .specialities-grid,
+  .testimonials-grid,
+  .tips-grid,
   .appointment-form {
     grid-template-columns: 1fr;
   }
