@@ -1828,18 +1828,6 @@ textarea:focus {
     width: 100%;
   }
 
-  /* Left-align body copy on phones (justify leaves big word gaps) */
-  .service-card p,
-  .patient-card p,
-  .payment-card p,
-  .tip-card p,
-  .testimonial-card p,
-  .experience-card p,
-  .doctor-copy p,
-  .appointment-copy p {
-    text-align: left;
-  }
-
   /* Stack the doctor credentials into one column for breathing room */
   .doctor-list {
     grid-template-columns: 1fr;
