@@ -1694,6 +1694,13 @@ textarea:focus {
     background: var(--soft);
   }
 
+  .site-header.nav-open .header-cta {
+    grid-column: 1 / -1;
+    display: inline-flex;
+    justify-self: stretch;
+    margin-top: 8px;
+  }
+
   .hero,
   .doctor-band,
   .split-section,
@@ -1756,12 +1763,18 @@ textarea:focus {
   }
 
   .hero {
-    padding-top: 34px;
+    padding-top: 24px;
+  }
+
+  /* Show the doctor photo first on mobile */
+  .hero-media {
+    order: -1;
+    margin-bottom: 8px;
   }
 
   .hero-media,
   .hero-media img {
-    min-height: 360px;
+    min-height: 320px;
   }
 
   .availability-card {
@@ -1812,6 +1825,34 @@ textarea:focus {
 
   .contact-actions,
   .contact-actions .btn {
+    width: 100%;
+  }
+
+  /* Left-align body copy on phones (justify leaves big word gaps) */
+  .service-card p,
+  .patient-card p,
+  .payment-card p,
+  .tip-card p,
+  .testimonial-card p,
+  .experience-card p,
+  .doctor-copy p,
+  .appointment-copy p {
+    text-align: left;
+  }
+
+  /* Stack the doctor credentials into one column for breathing room */
+  .doctor-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Full-width, easy-to-tap action buttons */
+  .hero-actions,
+  .hours-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn,
+  .hours-actions .btn {
     width: 100%;
   }
 
