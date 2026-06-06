@@ -5,31 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Dr Ajit Kishor medical clinic in Patna, Bihar for general physician appointments, primary care, preventive health checks, and family medicine services."
+      content="Dr Ajit Kishor provides modern primary care, general medicine, preventive checkups, chronic condition follow-up, and same-day sick visits in Patna."
     />
-    <title>Dr Ajit Kishor | General Physician in Patna</title>
+    <title>Dr Ajit Kishor | Modern Primary Care Clinic</title>
+    <link rel="icon" type="image/png" href="assets/clinic-logo.png" />
     <link rel="preconnect" href="https://content.jdmagicbox.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="top-bar" aria-label="Clinic highlights">
+      <span>Same-day appointments when available</span>
+      <a href="tel:+916205593020">Call 062055 93020</a>
+      <span>Mon - Sat, 9:00 AM - 9:00 PM</span>
+    </div>
+
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Dr Ajit Kishor home">
-        <span class="brand-mark">+</span>
+        <span class="brand-mark" aria-hidden="true">
+          <img src="assets/clinic-logo.png" alt="" />
+        </span>
         <span>
           <strong>Dr Ajit Kishor</strong>
-          <small>Medical clinic in Patna</small>
+          <small>Primary care and general medicine</small>
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="primaryNavigation"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="main-nav" aria-label="Primary navigation">
+      <nav class="main-nav" id="primaryNavigation" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#specialities">Specialities</a>
+        <a href="#care-plans">Plans</a>
+        <a href="#new-patients">New Patients</a>
         <a href="#doctor">Doctor</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
@@ -39,179 +63,363 @@
       <a class="header-cta" href="#appointment">Book Visit</a>
     </header>
 
-    <main id="home">
-      <section class="hero">
+    <main id="main">
+      <section class="hero" id="home">
         <div class="hero-copy">
-          <p class="eyebrow">General physician in Patna, Bihar</p>
-          <h1>Medical care for everyday health concerns.</h1>
+          <p class="eyebrow">Modern primary care clinic</p>
+          <h1>Organized care for everyday health and long-term wellness.</h1>
           <p class="hero-text">
-            Consult Dr Ajit Kishor for fever, infections, diabetes,
-            blood pressure, preventive checkups, and long-term health guidance.
+            Consult Dr Ajit Kishor for acute illness, diabetes, blood pressure,
+            thyroid care, preventive checkups, medication review, and practical
+            follow-up plans.
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#appointment">Book Appointment</a>
+            <a class="btn primary" href="#appointment">Request Appointment</a>
             <a class="btn secondary" href="tel:+916205593020">Call Clinic</a>
           </div>
 
-          <div class="trust-strip" aria-label="Clinic highlights">
-            <span><strong>4.9</strong> Google rating</span>
-            <span><strong>13</strong> Google reviews</span>
-            <span><strong>11</strong> Years in healthcare</span>
+          <div class="hero-points" aria-label="Patient experience">
+            <span>Clear visit summaries</span>
+            <span>Same-day sick visits</span>
+            <span>Privacy-minded intake</span>
           </div>
         </div>
 
         <div class="hero-media" aria-label="Doctor consultation room">
           <img
             src="https://content.jdmagicbox.com/v2/comp/patna/y5/0612px612.x612.250401132856.y9y5/catalogue/dr-ajit-kishor-pmch-annie-besant-road-patna-general-physician-doctors-66883w10kl-250.jpg"
-            alt="General physician standing in a bright clinic"
+            alt="Dr Ajit Kishor in a clinic consultation setting"
           />
           <div class="availability-card">
-            <span class="status-dot"></span>
+            <span class="status-dot" aria-hidden="true"></span>
             <div>
-              <strong>Today</strong>
-              <p>Open · Closes 9:00 PM</p>
+              <strong>Open today</strong>
+              <p>Appointments and walk-ins when slots are available.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section quick-actions" aria-label="Quick clinic actions">
+      <section class="quick-actions" aria-label="Quick clinic actions">
         <a href="tel:+916205593020" class="quick-card">
           <span>Call</span>
           <strong>062055 93020</strong>
         </a>
         <a href="#appointment" class="quick-card">
-          <span>Book Online</span>
+          <span>Appointment</span>
           <strong>Request your preferred slot</strong>
         </a>
         <a href="#hours" class="quick-card">
-          <span>Clinic Hours</span>
-          <strong>Open today until 9 PM</strong>
+          <span>Hours</span>
+          <strong>Mon - Sat, 9 AM - 9 PM</strong>
+        </a>
+        <a
+          href="https://www.google.com/maps/search/?api=1&amp;query=Monika%20niwas%2C%20Annie%20Besant%20Rd%2C%20Makhania%20Kuan%2C%20Lalbagh%2C%20Patna%2C%20Bihar%20800004"
+          class="quick-card"
+        >
+          <span>Directions</span>
+          <strong>Monika Niwas, Annie Besant Road</strong>
         </a>
       </section>
 
-      <section class="section" id="services">
+      <section class="section services-section" id="services">
         <div class="section-heading">
           <p class="eyebrow">Care Areas</p>
-          <h2>General physician services</h2>
+          <h2>Primary care services</h2>
           <p>
-            Practical, evidence-based care for common illnesses, ongoing conditions,
-            and preventive health needs.
+            Structured intake, focused clinical review, patient education, and a
+            clear plan for your next steps.
           </p>
         </div>
 
         <div class="services-grid">
           <article class="service-card">
-            <span class="service-icon">01</span>
-            <h3>Fever, cough & infections</h3>
-            <p>Diagnosis and treatment for seasonal fever, flu, throat infection, cough, cold, and body ache.</p>
+            <span class="service-num">01</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13.4V5a2 2 0 1 1 4 0v8.4a3.5 3.5 0 1 1-4 0Z"/><line x1="12" y1="15" x2="12" y2="9"/></svg>
+            </span>
+            <h3>Same-day sick visits</h3>
+            <p>Evaluation for fever, cough, flu-like illness, infections, body ache, throat pain, and seasonal illness.</p>
           </article>
           <article class="service-card">
-            <span class="service-icon">02</span>
-            <h3>Diabetes & BP care</h3>
-            <p>Routine monitoring, medication review, lifestyle planning, and complication prevention.</p>
+            <span class="service-num">02</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5s5.5 5.4 5.5 9.2A5.5 5.5 0 0 1 6.5 12.7C6.5 8.9 12 3.5 12 3.5Z"/></svg>
+            </span>
+            <h3>Diabetes care</h3>
+            <p>HbA1c review, medication planning, glucose logs, lifestyle counseling, and complication prevention.</p>
           </article>
           <article class="service-card">
-            <span class="service-icon">03</span>
+            <span class="service-num">03</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.6-7-9.6A3.6 3.6 0 0 1 12 8a3.6 3.6 0 0 1 7 2.4c0 5-7 9.6-7 9.6Z"/><path d="M5.5 11.5h3l1.2-2.2 1.8 4 1.2-2.3h4"/></svg>
+            </span>
+            <h3>Blood pressure care</h3>
+            <p>BP tracking, cardiovascular risk review, medicine adjustment, and home monitoring guidance.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-num">04</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 18a7 7 0 1 1 14 0"/><line x1="12" y1="18" x2="15.2" y2="12.8"/><circle cx="12" cy="18" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h3>Thyroid and metabolic care</h3>
+            <p>Thyroid report interpretation, follow-up plans, weight concerns, and metabolic health counseling.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-num">05</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 7.6 7 9 4-1.4 7-4.5 7-9V6l-7-3Z"/><path d="m9 11.6 2 2 4-4"/></svg>
+            </span>
+            <h3>Annual wellness checks</h3>
+            <p>Preventive screening, lab review, risk discussion, vaccination guidance, and health maintenance planning.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-num">06</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16 16 8a3.5 3.5 0 0 0-5-5l-8 8a3.5 3.5 0 0 0 5 5Z"/><line x1="7.3" y1="11.3" x2="12.7" y2="16.7"/></svg>
+            </span>
             <h3>Digestive concerns</h3>
-            <p>Care for acidity, gastritis, loose motions, constipation, abdominal pain, and appetite issues.</p>
+            <p>Care for acidity, gastritis, constipation, loose motions, abdominal pain, and appetite changes.</p>
           </article>
           <article class="service-card">
-            <span class="service-icon">04</span>
-            <h3>Health checkups</h3>
-            <p>Preventive screening, annual wellness review, lab report interpretation, and risk counselling.</p>
+            <span class="service-num">07</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="2.8"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/><line x1="17" y1="13" x2="17" y2="21"/></svg>
+            </span>
+            <h3>Geriatric review</h3>
+            <p>Medication review, chronic condition follow-up, fall risk discussion, and family-centered planning.</p>
           </article>
           <article class="service-card">
-            <span class="service-icon">05</span>
-            <h3>Family medicine</h3>
-            <p>Primary care for adults, elderly patients, and routine health concerns across the family.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon">06</span>
-            <h3>Minor procedures</h3>
-            <p>Basic wound dressing, injections, nebulization guidance, and follow-up care after procedures.</p>
+            <span class="service-num">08</span>
+            <span class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="16.5" x2="13" y2="16.5"/></svg>
+            </span>
+            <h3>Report interpretation</h3>
+            <p>Clear explanation of lab reports, prescriptions, warning signs, and next steps after specialist visits.</p>
           </article>
         </div>
       </section>
 
-      <section class="section specialities-section" id="specialities">
+      <section class="section plans-section" id="care-plans">
         <div class="section-heading">
-          <p class="eyebrow">Specialities</p>
-          <h2>Focus areas of clinical practice</h2>
+          <p class="eyebrow">Care Cards</p>
+          <h2>Health care plans for your family</h2>
           <p>
-            Specialised medical attention across the conditions most commonly seen at the clinic.
+            Affordable membership cards with priority appointments, regular
+            follow-ups, and preventive care designed for every member of the
+            family.
           </p>
         </div>
 
-        <div class="specialities-grid">
-          <article class="speciality-card">
-            <span class="speciality-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M6 3v6a4 4 0 0 0 8 0V3" />
-                <path d="M10 13v3a4 4 0 0 0 8 0v-2" />
-                <circle cx="18" cy="14" r="2" />
-              </svg>
-            </span>
-            <h3>General Medicine</h3>
-            <p>First-contact diagnosis and treatment for everyday illnesses, infections, and undiagnosed symptoms.</p>
+        <div class="billing-toggle" role="group" aria-label="Billing period">
+          <button type="button" class="billing-option is-active" data-billing="monthly" aria-pressed="true">Monthly</button>
+          <button type="button" class="billing-option" data-billing="yearly" aria-pressed="false">
+            Yearly <span class="save-badge">Save ~17%</span>
+          </button>
+        </div>
+
+        <div class="plans-grid">
+          <article class="plan-card">
+            <div class="plan-head">
+              <span class="plan-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="8" r="3"/><path d="M3 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.2"/><path d="M15.2 19a4 4 0 0 1 5.8-3.6"/></svg>
+              </span>
+              <div>
+                <h3>Family Care</h3>
+                <p class="plan-audience">For everyday family health</p>
+              </div>
+            </div>
+            <div class="plan-price">
+              <span class="plan-amount" data-monthly="499" data-yearly="4999">₹499</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <ul class="plan-features">
+              <li>Unlimited clinic consultations</li>
+              <li>Priority appointment slots</li>
+              <li>Free basic vitals check (BP and sugar)</li>
+              <li>10% off lab report reviews</li>
+            </ul>
+            <a class="btn secondary full" href="#appointment">Choose Family Care</a>
           </article>
 
-          <article class="speciality-card">
-            <span class="speciality-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3 6 11.5a6 6 0 1 0 12 0Z" />
-                <path d="M9.5 14a2.5 2.5 0 0 0 2.5 2.5" />
-              </svg>
-            </span>
-            <h3>Diabetes & Thyroid</h3>
-            <p>Sugar control plans, HbA1c review, thyroid management, and lifestyle counselling for long-term care.</p>
+          <article class="plan-card featured">
+            <span class="plan-tag">Most chosen</span>
+            <div class="plan-head">
+              <span class="plan-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="6.5" r="2.8"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/><line x1="17" y1="13" x2="17" y2="21"/></svg>
+              </span>
+              <div>
+                <h3>Elder Care</h3>
+                <p class="plan-audience">For parents and seniors (60+)</p>
+              </div>
+            </div>
+            <div class="plan-price">
+              <span class="plan-amount" data-monthly="699" data-yearly="6999">₹699</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Family Care</li>
+              <li>Monthly medication review</li>
+              <li>BP, sugar, and thyroid follow-up</li>
+              <li>Fall-risk and mobility check</li>
+              <li>Caregiver guidance for home care</li>
+            </ul>
+            <a class="btn full" href="#appointment">Choose Elder Care</a>
           </article>
 
-          <article class="speciality-card">
-            <span class="speciality-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.8 6.6a5.5 5.5 0 0 0-9-1.7 5.5 5.5 0 0 0-9 1.7C1 11 6.5 16 12 21c5.5-5 11-10 8.8-14.4Z" />
-              </svg>
-            </span>
-            <h3>Hypertension & Cardiac Risk</h3>
-            <p>Blood pressure monitoring, lipid review, ECG referrals, and prevention of long-term heart complications.</p>
+          <article class="plan-card">
+            <div class="plan-head">
+              <span class="plan-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+              </span>
+              <div>
+                <h3>Women's Care</h3>
+                <p class="plan-audience">For women's everyday wellness</p>
+              </div>
+            </div>
+            <div class="plan-price">
+              <span class="plan-amount" data-monthly="599" data-yearly="5999">₹599</span>
+              <span class="plan-period">/month</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Family Care</li>
+              <li>Thyroid and anemia screening guidance</li>
+              <li>Menstrual and hormonal health consults</li>
+              <li>Nutrition and wellness counseling</li>
+              <li>Annual women's checkup planning</li>
+            </ul>
+            <a class="btn secondary full" href="#appointment">Choose Women's Care</a>
           </article>
+        </div>
 
-          <article class="speciality-card">
-            <span class="speciality-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 4v9" />
-                <path d="M12 13c-2 0-3 1.5-3 4 0 2 1.5 3 3 3" />
-                <path d="M12 13c2 0 3 1.5 3 4 0 2-1.5 3-3 3" />
-                <path d="M9 7c-2 1-3 3-3 6" />
-                <path d="M15 7c2 1 3 3 3 6" />
-              </svg>
-            </span>
-            <h3>Respiratory Care</h3>
-            <p>Asthma, bronchitis, persistent cough, and post-viral breathing concerns with nebulization guidance.</p>
+        <p class="plans-note">
+          Care cards are membership plans for routine and preventive care. Final
+          benefits are confirmed at the clinic.
+        </p>
+      </section>
+
+      <section class="section experience-section" id="experience">
+        <div class="section-heading align-left">
+          <p class="eyebrow">Visit Experience</p>
+          <h2>A clinic flow built around clarity</h2>
+          <p>
+            Know exactly what happens before, during, and after your visit.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card">
+            <span>1</span>
+            <h3>Intake and history</h3>
+            <p>Share symptoms, current medicines, allergies, recent reports, and your main concern for the visit.</p>
           </article>
-
-          <article class="speciality-card">
-            <span class="speciality-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </span>
-            <h3>Geriatric Care</h3>
-            <p>Coordinated care for older adults — multi-medicine review, mobility support, and family guidance.</p>
+          <article class="experience-card">
+            <span>2</span>
+            <h3>Focused consultation</h3>
+            <p>Get a practical diagnosis plan, medicine review, lifestyle guidance, and referral advice when needed.</p>
           </article>
+          <article class="experience-card">
+            <span>3</span>
+            <h3>Follow-up plan</h3>
+            <p>Leave with next steps, warning signs, timing for review, and what reports to bring next time.</p>
+          </article>
+        </div>
+      </section>
 
-          <article class="speciality-card">
-            <span class="speciality-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 7v5l3 2" />
-              </svg>
+      <section class="section new-patient-section" id="new-patients">
+        <div class="section-heading">
+          <p class="eyebrow">New Patients</p>
+          <h2>What to expect before your first visit</h2>
+          <p>
+            A few simple steps make your first visit easier and faster.
+          </p>
+        </div>
+
+        <div class="patient-grid">
+          <article class="patient-card">
+            <span class="patient-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="14" height="16" rx="2"/><path d="M9 5V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1"/><path d="m9.3 13 1.8 1.8L15 11"/></svg>
             </span>
-            <h3>Preventive Wellness</h3>
-            <p>Annual checkups, vaccination guidance, lab interpretation, and risk reduction for working adults.</p>
+            <h3>Bring the essentials</h3>
+            <p>Carry a photo ID, current medicines, past prescriptions, recent lab reports, and home BP or sugar logs if available.</p>
+          </article>
+          <article class="patient-card">
+            <span class="patient-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-2-1.3-2 1.3-2-1.3-2 1.3-2-1.3L6 21Z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="13.5" y2="12"/></svg>
+            </span>
+            <h3>Transparent consultation fee</h3>
+            <p>In-clinic and video consultation fee: INR 300. Call the clinic for current payment options and documentation needs.</p>
+          </article>
+          <article class="patient-card">
+            <span class="patient-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.4" r="1.3"/></svg>
+            </span>
+            <h3>Privacy-minded communication</h3>
+            <p>Avoid sending sensitive medical records through unsecured messages until the clinic confirms the right channel.</p>
+          </article>
+          <article class="patient-card alert">
+            <span class="patient-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3 19h18Z"/><line x1="12" y1="10" x2="12" y2="14"/><circle cx="12" cy="16.6" r="0.7" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <h3>Emergency guidance</h3>
+            <p>This site is not for emergencies. For chest pain, stroke symptoms, severe breathing trouble, or unconsciousness, seek emergency care immediately.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section conditions-section" id="conditions">
+        <div class="section-heading">
+          <p class="eyebrow">Conditions</p>
+          <h2>Common concerns treated at the clinic</h2>
+          <p>
+            General medicine works best when short-term symptoms and long-term
+            health risks are managed together.
+          </p>
+        </div>
+
+        <div class="condition-groups">
+          <article class="acute">
+            <div class="condition-head">
+              <span class="condition-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l2.5-7 4 14L16 12h5"/></svg>
+              </span>
+              <h3>Acute care</h3>
+            </div>
+            <ul>
+              <li>Fever, cough, cold, and flu-like illness</li>
+              <li>Throat infection and respiratory symptoms</li>
+              <li>Loose motions, vomiting, and dehydration risk</li>
+              <li>Skin allergies and minor infections</li>
+            </ul>
+          </article>
+          <article class="chronic">
+            <div class="condition-head">
+              <span class="condition-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+              </span>
+              <h3>Chronic care</h3>
+            </div>
+            <ul>
+              <li>Diabetes and prediabetes</li>
+              <li>Hypertension and cholesterol risk</li>
+              <li>Thyroid disorders</li>
+              <li>Medication review for older adults</li>
+            </ul>
+          </article>
+          <article class="preventive">
+            <div class="condition-head">
+              <span class="condition-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 7.6 7 9 4-1.4 7-4.5 7-9V6l-7-3Z"/><path d="m9 11.6 2 2 4-4"/></svg>
+              </span>
+              <h3>Preventive care</h3>
+            </div>
+            <ul>
+              <li>Annual checkup planning</li>
+              <li>Lab report interpretation</li>
+              <li>Vaccination counseling</li>
+              <li>Lifestyle and risk reduction guidance</li>
+            </ul>
           </article>
         </div>
       </section>
@@ -220,66 +428,91 @@
         <div class="doctor-image">
           <img
             src="https://content.jdmagicbox.com/v2/comp/patna/y5/0612px612.x612.250401132856.y9y5/catalogue/dr-ajit-kishor-pmch-annie-besant-road-patna-general-physician-doctors-66883w10kl-250.jpg"
-            alt="Doctor reviewing a patient chart"
+            alt="Doctor reviewing patient information"
           />
         </div>
         <div class="doctor-copy">
           <p class="eyebrow">Meet Your Doctor</p>
           <h2>Dr Ajit Kishor</h2>
           <p>
-            Dr Ajit Kishor runs a medical clinic in Patna, Bihar, offering reliable
-            first-contact care for common illnesses, ongoing health concerns, and
-            preventive medical guidance.
+            Dr Ajit Kishor runs a primary care and general medicine clinic in
+            Patna, offering first-contact care for everyday illness, ongoing
+            health concerns, and preventive medical guidance.
           </p>
           <ul class="doctor-list">
-            <li>Specialization: Consultant Physician</li>
-            <li>Qualification: MD - PMCH - 2023</li>
-            <li>Chronic disease care for diabetes, thyroid, and hypertension</li>
-            <li>Preventive screening and annual health checkup planning</li>
+            <li>
+              <span class="doctor-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="m8.4 13-1.4 8 5-3 5 3-1.4-8"/></svg>
+              </span>
+              <div>
+                <span class="doctor-stat-label">Specialization</span>
+                <strong>Consultant Physician</strong>
+              </div>
+            </li>
+            <li>
+              <span class="doctor-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-4 9 4-9 4-9-4Z"/><path d="M7 11v4c0 1.4 2.5 2.8 5 2.8s5-1.4 5-2.8v-4"/><path d="M21 9v4"/></svg>
+              </span>
+              <div>
+                <span class="doctor-stat-label">Qualification</span>
+                <strong>MD - PMCH - 2023</strong>
+              </div>
+            </li>
+            <li>
+              <span class="doctor-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+              </span>
+              <div>
+                <span class="doctor-stat-label">Experience</span>
+                <strong>11 years in healthcare</strong>
+              </div>
+            </li>
+            <li>
+              <span class="doctor-stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v10H9l-4 3.5V15H4Z"/><path d="M8.5 10h7M8.5 7.5h5"/></svg>
+              </span>
+              <div>
+                <span class="doctor-stat-label">Languages</span>
+                <strong>Hindi and English</strong>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section class="section quick-info-section" id="quick-info">
+      <section class="section payment-section" id="payment">
         <div class="section-heading">
-          <p class="eyebrow">Quick Information</p>
-          <h2>Consultation details</h2>
-          <p>Key clinic information for patients planning a visit or online consultation.</p>
+          <p class="eyebrow">Payment And Documentation</p>
+          <h2>Clear information for planning your visit</h2>
+          <p>
+            Clear details on payment, documentation, and privacy before you book.
+          </p>
         </div>
 
-        <div class="info-grid">
-          <article class="info-card">
-            <span>Specialization</span>
-            <strong>Consultant Physician</strong>
-          </article>
-          <article class="info-card">
+        <div class="payment-grid">
+          <article class="payment-card emphasis">
+            <span class="payment-fee-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 9.5v5M18 9.5v5"/></svg>
+            </span>
             <span>Consultation Fee</span>
-            <strong>₹ 300</strong>
+            <strong>INR 300</strong>
+            <p>Applies to in-clinic consultation and video consultation. Confirm current payment options before arrival.</p>
           </article>
-          <article class="info-card">
-            <span>Languages Spoken</span>
-            <strong>Hindi, English</strong>
+          <article class="payment-card">
+            <span class="payment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5"/><path d="m9 14 2 2 3-3.5"/></svg>
+            </span>
+            <h3>Documents and certificates</h3>
+            <p>Medical notes, prescriptions, receipts, and certificates are provided only when clinically appropriate after consultation.</p>
           </article>
-          <article class="info-card">
-            <span>Qualification</span>
-            <strong>MD - PMCH - 2023</strong>
-          </article>
-          <article class="info-card">
-            <span>Video Consultation</span>
-            <strong>₹ 300</strong>
-          </article>
-          <article class="info-card">
-            <span>Year of Experience</span>
-            <strong>11 Years in Healthcare</strong>
+          <article class="payment-card">
+            <span class="payment-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="7.5" width="17" height="12" rx="2"/><path d="M9 7.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.5"/><path d="M3.5 12.5h17"/></svg>
+            </span>
+            <h3>Insurance and employer paperwork</h3>
+            <p>Call ahead if you need itemized receipts, employer forms, reimbursement documents, or a referral summary.</p>
           </article>
         </div>
-
-        <!-- <p class="source-line">
-          Source:
-          <a href="https://www.justdial.com/Patna/Dr-Ajit-Kishor-PMCH-Opposite-Patna-College-Near-Razza-High-School-Annie-Besant-Road/0612PX612-X612-250401132856-Y9Y5_BZDET">
-            Justdial.com
-          </a>
-        </p> -->
       </section>
 
       <section class="section testimonials-section" id="reviews">
@@ -287,41 +520,42 @@
           <p class="eyebrow">Patient Reviews</p>
           <h2>What patients say</h2>
           <p>
-            A 4.9★ Google rating reflects the experience of patients across general consultation, chronic disease care, and family medicine.
+            Patient feedback reflects clear explanations, calm follow-up, and
+            reliable chronic condition care.
           </p>
         </div>
 
         <div class="testimonials-grid">
           <article class="testimonial-card">
-            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="rating" aria-label="5 out of 5 rating">5.0 / 5</div>
             <p>
-              "Dr Ajit explains every report clearly and never rushes the consultation. My mother's BP and sugar levels are finally stable after years of unclear advice elsewhere."
+              "Dr Ajit explains every report clearly and never rushes the consultation. My mother's BP and sugar levels are finally stable."
             </p>
             <footer>
               <strong>Pooja Sinha</strong>
-              <span>Family follow-up · Patna</span>
+              <span>Family follow-up</span>
             </footer>
           </article>
 
           <article class="testimonial-card">
-            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="rating" aria-label="5 out of 5 rating">5.0 / 5</div>
             <p>
-              "Reached the clinic with high fever and chest tightness. Got a calm assessment, the right medicines, and clear instructions on warning signs. Recovered in three days."
+              "I reached the clinic with high fever and chest tightness. I got a calm assessment, the right medicines, and clear warning signs."
             </p>
             <footer>
               <strong>Rahul Verma</strong>
-              <span>Acute illness · Lalbagh</span>
+              <span>Acute illness</span>
             </footer>
           </article>
 
           <article class="testimonial-card">
-            <div class="rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <div class="rating" aria-label="5 out of 5 rating">5.0 / 5</div>
             <p>
-              "Honest, soft-spoken, and patient with elderly people. My father trusts him completely for his diabetes and thyroid review every month."
+              "Honest, soft-spoken, and patient with elderly people. My father trusts him for diabetes and thyroid review every month."
             </p>
             <footer>
               <strong>Anita Kumari</strong>
-              <span>Geriatric care · Makhania Kuan</span>
+              <span>Geriatric care</span>
             </footer>
           </article>
         </div>
@@ -329,58 +563,94 @@
 
       <section class="section tips-section" id="tips">
         <div class="section-heading">
-          <p class="eyebrow">Patient Education</p>
-          <h2>Everyday health tips</h2>
-          <p>Short, doctor-approved guidance for the most common questions raised at the clinic.</p>
+          <p class="eyebrow">Health Reminders</p>
+          <h2>Small steps that support better care</h2>
+          <p>
+            These reminders help patients prepare for a safer, more productive
+            consultation.
+          </p>
         </div>
 
         <div class="tips-grid">
           <article class="tip-card">
             <span class="tip-tag">Diabetes</span>
-            <h3>Fasting sugar above 130?</h3>
-            <p>Don't skip your morning dose. Walk for 20 minutes after breakfast and recheck after three days. Bring the log to your next visit.</p>
+            <h3>Bring your sugar log</h3>
+            <p>Recent fasting and post-meal readings help the doctor understand patterns and adjust follow-up advice.</p>
           </article>
           <article class="tip-card">
             <span class="tip-tag">Fever</span>
-            <h3>When fever needs review</h3>
-            <p>Persistent fever beyond 72 hours, breathlessness, or rash should be examined the same day. Avoid self-prescribing antibiotics.</p>
+            <h3>Track warning signs</h3>
+            <p>Note fever duration, breathing symptoms, rash, dehydration, travel, and medicines already taken.</p>
           </article>
           <article class="tip-card">
             <span class="tip-tag">Blood Pressure</span>
-            <h3>Measuring BP correctly</h3>
-            <p>Sit quietly for 5 minutes, feet on floor, arm at heart level. Take two readings a minute apart and record both for review.</p>
+            <h3>Record home readings</h3>
+            <p>Bring two or three days of readings, along with timing and current medicines, for a clearer review.</p>
           </article>
           <article class="tip-card">
-            <span class="tip-tag">Acidity</span>
-            <h3>Recurring acidity?</h3>
-            <p>Avoid late dinners, fried food, and habitual painkiller use. If symptoms persist beyond two weeks, schedule an evaluation.</p>
+            <span class="tip-tag">Medication</span>
+            <h3>Carry current medicines</h3>
+            <p>Photos or strips of active medicines reduce confusion and help prevent duplicate prescriptions.</p>
           </article>
         </div>
       </section>
 
       <section class="section split-section" id="hours">
-        <div class="section-heading align-left">
-          <p class="eyebrow">Visit Timing</p>
-          <h2>Clinic hours</h2>
-          <p>Walk-ins are accepted when slots are available. Appointments are recommended for shorter waiting time.</p>
+        <div class="hours-intro">
+          <div class="section-heading align-left">
+            <p class="eyebrow">Visit Timing</p>
+            <h2>Clinic hours</h2>
+            <p>Walk-ins are accepted when slots are available. Appointments are recommended for shorter waiting time.</p>
+          </div>
+
+          <ul class="hours-highlights">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>
+              Open six days a week, including evening hours till 9 PM.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>
+              Booking ahead means shorter waiting time on busy days.
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5 10 17l9-10"/></svg>
+              Video consultation available for follow-ups and report review.
+            </li>
+          </ul>
+
+          <div class="hours-actions">
+            <a class="btn primary" href="#appointment">Request Appointment</a>
+            <a class="btn secondary" href="tel:+916205593020">Call 062055 93020</a>
+          </div>
         </div>
 
         <div class="hours-panel">
           <div class="time-row">
-            <span>Monday - Saturday</span>
+            <div class="time-main">
+              <span class="time-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+              </span>
+              <span>Monday - Saturday</span>
+            </div>
             <strong>9:00 AM - 9:00 PM</strong>
           </div>
           <div class="time-row">
-            <span>Sunday</span>
+            <div class="time-main">
+              <span class="time-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 9.5h16M8 3v4M16 3v4"/><path d="m10.5 14 3 3M13.5 14l-3 3"/></svg>
+              </span>
+              <span>Sunday</span>
+            </div>
             <strong>Closed</strong>
           </div>
           <div class="time-row">
-            <span>Location</span>
-            <strong>Located in T. Raza High School</strong>
-          </div>
-          <div class="note-box">
-            For chest pain, severe breathlessness, stroke symptoms, or major injury,
-            go to the nearest emergency department immediately.
+            <div class="time-main">
+              <span class="time-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </span>
+              <span>Location</span>
+            </div>
+            <strong>Monika Niwas, Annie Besant Road</strong>
           </div>
         </div>
       </section>
@@ -398,42 +668,42 @@
               <span>Do I need an appointment, or can I walk in?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
-            <p>Walk-ins are accepted whenever slots are free, but booking ahead via the appointment form or phone call shortens the waiting time considerably.</p>
+            <p>Walk-ins are accepted whenever slots are free, but booking ahead by phone or the appointment form helps reduce waiting time.</p>
           </details>
           <details>
             <summary>
               <span>What should I carry for my first visit?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
-            <p>A photo ID, your current medicines, and any recent lab reports or prescriptions. For diabetic or hypertensive patients, a home log of readings helps.</p>
+            <p>Carry a photo ID, current medicines, recent lab reports, previous prescriptions, and home readings for diabetes or blood pressure if available.</p>
           </details>
           <details>
             <summary>
               <span>Is video consultation available?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
-            <p>Yes. Video consultations are offered at ₹300, ideal for follow-ups, prescription review, and report interpretation. Call the clinic to schedule.</p>
+            <p>Yes. Video consultation is available for INR 300 and is best suited for follow-ups, prescription review, and report interpretation.</p>
           </details>
           <details>
             <summary>
-              <span>Do you treat children?</span>
+              <span>Can I get documents for work or reimbursement?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
-            <p>The clinic treats older children and adolescents for general illnesses. For infants and young children, a paediatrician is recommended for ongoing care.</p>
+            <p>Receipts, notes, referrals, and certificates can be provided after clinical review when appropriate. Call ahead for specific paperwork needs.</p>
           </details>
           <details>
             <summary>
               <span>What if I have an emergency?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
-            <p>For chest pain, severe breathlessness, stroke symptoms, major injury, or unconsciousness, please go directly to the nearest emergency department.</p>
+            <p>This website and appointment form are not for emergencies. For severe symptoms, go to the nearest emergency department immediately.</p>
           </details>
           <details>
             <summary>
               <span>How long is a typical consultation?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </summary>
-            <p>First visits usually take 15–20 minutes. Follow-ups are shorter. Time is given as needed — chronic disease reviews are not rushed.</p>
+            <p>First visits usually take longer than follow-ups. Chronic disease reviews may need extra time for medicine and report review.</p>
           </details>
         </div>
       </section>
@@ -441,29 +711,49 @@
       <section class="section appointment-section" id="appointment">
         <div class="appointment-copy">
           <p class="eyebrow">Appointment</p>
-          <h2>Book a consultation</h2>
+          <h2>Request a consultation</h2>
           <p>
-            Share basic details and the clinic team will confirm your appointment by phone.
+            Mostly tap and select - it takes under a minute. The clinic team
+            confirms by phone or WhatsApp.
           </p>
+          <div class="appointment-note">
+            Your confirmation and consultation sheet are emailed to you, so please
+            enter a valid email. Call the clinic for urgent scheduling questions.
+          </div>
         </div>
 
         <form class="appointment-form" id="appointmentForm">
           <label>
             Full name
-            <input type="text" name="name" placeholder="Patient name" required />
+            <input type="text" name="name" placeholder="Patient name" autocomplete="name" required />
           </label>
           <label>
             Phone number
-            <input type="tel" name="phone" placeholder="062055 93020" required />
+            <input type="tel" name="phone" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" required />
+          </label>
+          <label class="full">
+            Email address
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required />
+          </label>
+          <label>
+            Patient type
+            <select name="patientType" required>
+              <option value="" disabled selected>Select</option>
+              <option>New patient</option>
+              <option>Existing patient</option>
+              <option>Booking for a family member</option>
+            </select>
           </label>
           <label>
             Visit reason
             <select name="reason" required>
-              <option value="">Select reason</option>
-              <option>Fever or infection</option>
+              <option value="" disabled selected>Select</option>
+              <option>Same-day sick visit</option>
               <option>Diabetes / BP follow-up</option>
-              <option>Health checkup</option>
-              <option>Digestive concern</option>
+              <option>Thyroid / metabolic care</option>
+              <option>Annual wellness check</option>
+              <option>Video consultation</option>
+              <option>Report interpretation</option>
               <option>Other consultation</option>
             </select>
           </label>
@@ -471,11 +761,21 @@
             Preferred date
             <input type="date" name="date" required />
           </label>
-          <label class="full">
-            Message
-            <textarea name="message" rows="4" placeholder="Briefly describe symptoms or appointment preference"></textarea>
+          <label>
+            Preferred time
+            <select name="time" required>
+              <option value="" disabled selected>Select</option>
+              <option>Morning (9 AM - 12 PM)</option>
+              <option>Afternoon (12 - 4 PM)</option>
+              <option>Evening (4 - 9 PM)</option>
+              <option>First available</option>
+            </select>
           </label>
-          <button class="btn primary full" type="submit">Request Appointment</button>
+          <label class="checkbox-row full">
+            <input type="checkbox" name="emergencyConsent" required />
+            <span>I understand this request is not for emergencies.</span>
+          </label>
+          <button class="btn primary full" type="submit">Send Appointment Request</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
@@ -483,19 +783,25 @@
       <section class="contact-band" id="contact">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Dr Ajit Kishor</h2>
-          <p>Monika niwas, Annie Besant Rd, Makhania Kuan, Lalbagh, Patna, Bihar 800004</p>
+          <h2>Visit the clinic</h2>
+          <p>Monika Niwas, Annie Besant Rd, Makhania Kuan, Lalbagh, Patna, Bihar 800004</p>
           <p>Located in: T. Raza High School</p>
         </div>
         <div class="contact-actions">
-          <a class="btn secondary" href="tel:+916205593020">062055 93020</a>
-          <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&query=Monika%20niwas%2C%20Annie%20Besant%20Rd%2C%20Makhania%20Kuan%2C%20Lalbagh%2C%20Patna%2C%20Bihar%20800004">Directions</a>
+          <a class="btn secondary" href="tel:+916205593020">Call Clinic</a>
+          <a
+            class="btn secondary"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Monika%20niwas%2C%20Annie%20Besant%20Rd%2C%20Makhania%20Kuan%2C%20Lalbagh%2C%20Patna%2C%20Bihar%20800004"
+          >
+            Get Directions
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Dr Ajit Kishor. General physician and primary care services.</p>
+      <p>(c) 2026 Dr Ajit Kishor. General medicine and primary care services.</p>
+      <p>This website does not replace emergency care or an in-person medical evaluation.</p>
       <a href="#home">Back to top</a>
     </footer>
 
