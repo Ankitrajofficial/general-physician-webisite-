@@ -13,6 +13,9 @@ the clinic. One-time setup, no server or paid service required.
    - `CONSULTATION_FEE` — amount printed on the sheet (e.g. `INR 300`).
    - `DOCTOR_NAME`, `DOCTOR_QUALIFICATION`, `DOCTOR_REG_NO` — printed on the sheet.
    - `SHEET_ID` — optional, see step 1b below. Leave `""` to skip.
+   - `ADD_TO_CALENDAR`, `CALENDAR_ID`, `APPOINTMENT_DURATION_MIN` — calendar
+     options (see section 6). Leave the defaults to add every booking to the
+     clinic's Google Calendar and invite the patient.
 4. Click the **Save** icon.
 
 ### 1b. (Optional) Log every booking to a Google Sheet
@@ -21,7 +24,8 @@ the clinic. One-time setup, no server or paid service required.
    `https://docs.google.com/spreadsheets/d/`**`THIS_PART`**`/edit`
 3. Paste it into `SHEET_ID` in the code: `const SHEET_ID = "THIS_PART";`
 4. The script auto-adds a header row on the first booking, then appends one row
-   per booking (timestamp, code, name, phone, email, type, reason, date, time).
+   per booking (timestamp, code, name, phone, email, type, reason, date, time,
+   scheduling note).
    The sheet must belong to (or be shared as editor with) the account running
    the script.
 
@@ -33,7 +37,8 @@ the clinic. One-time setup, no server or paid service required.
    - **Who has access:** Anyone
 4. Click **Deploy**. Approve the permissions prompt. The script needs to **send
    email** (`MailApp`), **convert the sheet HTML to a PDF** (a Drive permission),
-   and — if you set `SHEET_ID` — **edit the Google Sheet** (a Sheets permission).
+   **create Google Calendar events** (a Calendar permission), and — if you set
+   `SHEET_ID` — **edit the Google Sheet** (a Sheets permission).
    Approve all of them. You may see an "unverified app" warning; choose
    **Advanced → Go to project (unsafe)** since it is your own script.
 5. Copy the **Web app URL** (ends in `/exec`).
@@ -63,6 +68,32 @@ the clinic. One-time setup, no server or paid service required.
 - **Two emails:** clinic notification + patient confirmation (patient email only
   sent when the patient filled the optional email field).
 
+## 6. Calendar — adds each booking to Google Calendar
+On by default (`ADD_TO_CALENDAR = true`). For every booking the script:
+- Creates an event on the **clinic's calendar** (the account that owns the
+  script), on the preferred date. The time slot maps to a start time —
+  Morning → 9:00 AM, Afternoon → 12:00 PM, Evening → 4:00 PM, "First available"
+  → 9:00 AM — and lasts `APPOINTMENT_DURATION_MIN` minutes (default 30). The
+  clinic can drag it to the exact time when confirming.
+- Adds the **patient as a guest** (when they gave an email), so Google emails
+  them a calendar invite that lands on **their** calendar once accepted. The
+  patient's confirmation email also has an **"Add to my Google Calendar"** button,
+  and the website shows the same button right after they submit.
+
+Options in the `CONFIG` block:
+- `ADD_TO_CALENDAR` — set to `false` to turn the calendar off entirely.
+- `CALENDAR_ID` — leave `""` to use the clinic account's default calendar, or
+  paste a specific Calendar ID (Google Calendar ▸ that calendar's **Settings** ▸
+  **Integrate calendar** ▸ **Calendar ID**) to use a dedicated "Appointments"
+  calendar.
+- `APPOINTMENT_DURATION_MIN` — block length in minutes.
+
+> **Important:** because this is a code change, paste the updated `Code.gs`, then
+> **Deploy → Manage deployments → Edit → Deploy** (or just **Run** `doGet` once)
+> and approve the new **Calendar** permission. Until you re-authorize, only the
+> emails run; the website's instant "Add to my Google Calendar" button still
+> works for patients on its own.
+
 ## 5. (Optional) Scheduled jobs — daily summary + reminders
 These need `SHEET_ID` set (step 1b), since they read from the bookings sheet.
 
@@ -83,7 +114,8 @@ again (it removes the old ones first). To test immediately, just **Run** the
 function directly from the editor.
 
 ## Notes
-- The form still opens WhatsApp after submitting (Email + WhatsApp flow).
+- After submitting, the website reveals a WhatsApp follow-up link with the same
+  booking details. The email request is still sent through Apps Script.
 - Emails send **from the account that owns the script** and deliver to
   `RECIPIENT_EMAIL`. `replyTo` lets the clinic reply straight to the patient.
 - Gmail sending limit on a free account is ~100 emails/day. Each booking with a
