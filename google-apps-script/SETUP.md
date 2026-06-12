@@ -54,19 +54,21 @@ the clinic. One-time setup, no server or paid service required.
 
 ## 4. Test
 - Open the site, submit a test booking **with an email address**. You should get:
-  - **Clinic inbox:** "New appointment request - <name> (CODE)" + receipt PDF.
-  - **Patient inbox:** "Your appointment request with <clinic> (CODE)" + receipt PDF.
-- Open the attached PDF — it shows clinic header, the booking code, appointment
-  details, the fee, and the "carry cash or pay online" note.
+  - **Clinic inbox:** "New appointment request - <name> (CODE)" + consultation sheet PDF.
+  - **Patient inbox:** "Your appointment request with <clinic> (CODE)" — booking
+    confirmation only, no attachment.
+- Open the PDF attached to the clinic email — it shows the clinic header, the
+  booking code, appointment details, the fee, and the consultation sheet layout.
 - To test the URL directly, open the `/exec` link in a browser — it returns
   `{"ok":true,"service":"appointment-notifier"}`.
 
 ## What each booking produces
 - A unique **booking code** (e.g. `DAK-20260606-4821`) shown in both emails and
-  the PDF receipt.
-- A **clinical PDF receipt** attached to both emails.
-- **Two emails:** clinic notification + patient confirmation (patient email only
-  sent when the patient filled the optional email field).
+  on the consultation sheet.
+- A **clinical consultation sheet (PDF)** attached to the **clinic email only**
+  (the doctor can print it for the visit). The patient does **not** receive it.
+- **Two emails:** clinic notification (with PDF) + patient booking confirmation
+  (no attachment; sent only when the patient filled the optional email field).
 
 ## 6. Calendar — adds each booking to Google Calendar
 On by default (`ADD_TO_CALENDAR = true`). For every booking the script:

@@ -1,12 +1,13 @@
 /**
- * Appointment booking → email + PDF receipt (Google Apps Script web app)
+ * Appointment booking -> email + PDF receipt (Google Apps Script web app)
  *
  * On each booking from the website form this:
  *   1. Generates a unique booking code.
- *   2. Builds a clinical PDF receipt (clinic branding, code, fee, payment note).
- *   3. Emails the CLINIC a notification with the receipt attached.
- *   4. Emails the PATIENT a confirmation with the same receipt attached
- *      (only when the patient provided an email address).
+ *   2. Builds a clinical consultation sheet PDF (clinic branding, code, fee).
+ *   3. Emails the CLINIC a notification with the consultation sheet attached
+ *      (so the doctor has a sheet ready to print for the visit).
+ *   4. Emails the PATIENT a clean booking confirmation - no PDF attached -
+ *      when the patient provided an email address.
  *
  * Deploy as a Web App (see SETUP.md). Set the CONFIG values below first.
  */
@@ -32,7 +33,7 @@ const DOCTOR_REG_NO = ""; // optional medical registration number (blank = hidde
 const CODE_PREFIX = "DAK";
 
 // Optional: log every booking to a Google Sheet. Paste the Sheet ID from its
-// URL — the part between /d/ and /edit:
+// URL - the part between /d/ and /edit:
 //   https://docs.google.com/spreadsheets/d/THIS_PART/edit
 // Leave "" to skip sheet logging (emails still work).
 const SHEET_ID = "";
@@ -42,7 +43,7 @@ const SHEET_ID = "";
 // invite (which lands on THEIR calendar when accepted).
 const ADD_TO_CALENDAR = true;
 // "" = the clinic account's default calendar. To use a specific calendar,
-// open Google Calendar ▸ that calendar's Settings ▸ "Integrate calendar" ▸
+// open Google Calendar > that calendar's Settings > "Integrate calendar" >
 // copy the Calendar ID and paste it here.
 const CALENDAR_ID = "";
 // How long each appointment block is, in minutes.
@@ -85,12 +86,13 @@ function doPost(e) {
     });
 
     // 2) Patient confirmation (only if an email was provided).
+    //    Clean booking confirmation only - the consultation sheet PDF is for
+    //    the clinic, not the patient, so no attachment is sent here.
     if (hasEmail) {
       MailApp.sendEmail(fields.email, "Your appointment request with " + CLINIC_NAME + " (" + bookingCode + ")", patientPlain(fields, bookingCode), {
         name: CLINIC_NAME,
         htmlBody: patientHtml(fields, bookingCode),
         replyTo: RECIPIENT_EMAIL,
-        attachments: [receipt],
       });
     }
 
@@ -214,7 +216,7 @@ const COL = {
 };
 
 /**
- * Run once from the editor (Run ▸ setupTriggers) to install both schedules.
+ * Run once from the editor (Run > setupTriggers) to install both schedules.
  * Summary every morning ~8 AM, reminders every evening ~6 PM.
  */
 function setupTriggers() {
@@ -457,7 +459,7 @@ function sheetHtml(f, code, issuedOn) {
     '<tr>' +
     vitalCell_('BP', 'mmHg') +
     vitalCell_('Pulse', '/min') +
-    vitalCell_('Temp', '°F') +
+    vitalCell_('Temp', '\u00B0F') +
     vitalCell_('Weight', 'kg') +
     vitalCell_('SpO2', '%') +
     vitalCell_('RBS', 'mg/dL', true) +
@@ -587,7 +589,7 @@ function patientHtml(f, code) {
     '<p style="margin:18px 0 0;padding:13px 15px;background:#fff2e2;border:1px solid #f1c797;color:#71351f;font-size:13px;line-height:1.6;">' +
     'Please carry <strong>cash</strong>, or be ready to pay <strong>online (UPI / card)</strong> at the clinic. ' +
     'Show your booking code <strong>' + esc(code) + '</strong> at the reception.</p>' +
-    '<p style="margin:14px 0 0;color:#63727e;font-size:13px;">Your consultation sheet (with prescription space) is attached as a PDF. Please bring a printout to your visit.</p>' +
+    '<p style="margin:14px 0 0;color:#63727e;font-size:13px;">Please bring any previous prescriptions, recent lab reports and a list of your current medicines to your visit.</p>' +
     '</div>'
   );
 }
@@ -618,7 +620,7 @@ function patientPlain(f, code) {
     "Consultation fee: " + CONSULTATION_FEE,
     "",
     "Please carry cash or be ready for online payment (UPI / card) at the clinic.",
-    "Show your booking code at the reception. Consultation sheet PDF attached - please bring a printout.",
+    "Show your booking code at the reception. Please bring previous prescriptions, recent reports and your current medicines.",
   ].join("\n");
 }
 

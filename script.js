@@ -240,6 +240,8 @@ function buildWhatsAppUrl(payload) {
 }
 
 if (form && statusMessage) {
+  const successPanel = document.querySelector(".form-success");
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -262,34 +264,52 @@ if (form && statusMessage) {
       submittedAt: new Date().toISOString(),
     };
 
+    // Show a brief "sending" state so the confirmation feels considered,
+    // not instant. The request itself is fired right away.
     if (submitButton) {
       submitButton.disabled = true;
+      submitButton.classList.add("is-loading");
       submitButton.textContent = "Sending Request…";
     }
+    if (successPanel) successPanel.hidden = true;
 
     sendBookingEmail(payload);
 
-    statusMessage.textContent = `Thank you, ${payload.patientName}. Your appointment request has been sent — the clinic team will confirm your slot by phone or WhatsApp.`;
+    // Deliberate ~1s pause (frontend only) before revealing the confirmation.
+    window.setTimeout(() => {
+      statusMessage.textContent = `Thank you, ${payload.patientName}. Your appointment request has been sent — our team will confirm your slot by phone or WhatsApp shortly.`;
 
-    if (calendarFollowup) {
-      const calUrl = buildCalendarUrl(payload);
-      if (calUrl) {
-        calendarFollowup.href = calUrl;
-        calendarFollowup.hidden = false;
+      const codeEl = successPanel ? successPanel.querySelector(".success-code") : null;
+      if (codeEl) {
+        codeEl.textContent = `Requested for ${payload.date || "your chosen date"} · ${payload.time || "first available"}`;
       }
-    }
 
-    if (whatsappFollowup) {
-      whatsappFollowup.href = buildWhatsAppUrl(payload);
-      whatsappFollowup.hidden = false;
-    }
+      if (calendarFollowup) {
+        const calUrl = buildCalendarUrl(payload);
+        if (calUrl) {
+          calendarFollowup.href = calUrl;
+          calendarFollowup.hidden = false;
+        }
+      }
 
-    form.reset();
-    setMinimumDate();
+      if (whatsappFollowup) {
+        whatsappFollowup.href = buildWhatsAppUrl(payload);
+        whatsappFollowup.hidden = false;
+      }
 
-    if (submitButton) {
-      submitButton.disabled = false;
-      submitButton.textContent = "Send Appointment Request";
-    }
+      if (successPanel) {
+        successPanel.hidden = false;
+        successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      form.reset();
+      setMinimumDate();
+
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.classList.remove("is-loading");
+        submitButton.textContent = "Send Appointment Request";
+      }
+    }, 1000);
   });
 }
