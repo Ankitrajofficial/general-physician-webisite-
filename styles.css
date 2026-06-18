@@ -321,7 +321,7 @@ p { color: var(--ink-soft); }
 }
 .hero-content { max-width: 560px; }
 .hero h1 { margin-bottom: 22px; }
-.hero-text { font-size: 1.13rem; max-width: 500px; text-align: justify; text-justify: inter-word; hyphens: auto; }
+.hero-text { font-size: 1.13rem; max-width: 500px; text-align: left; text-justify: inter-word; hyphens: manual; }
 
 .hero-actions {
   display: flex;
@@ -499,9 +499,9 @@ p { color: var(--ink-soft); }
 .service-card p {
   font-size: 0.93rem;
   line-height: 1.62;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
 }
 .service-more {
   display: inline-flex;
@@ -531,7 +531,7 @@ p { color: var(--ink-soft); }
   align-items: center;
 }
 .doctor-copy h2 { margin-bottom: 18px; }
-.doctor-copy > p { text-align: justify; text-justify: inter-word; hyphens: auto; }
+.doctor-copy > p { text-align: left; text-justify: inter-word; hyphens: manual; }
 .doctor-points { list-style: none; margin: 24px 0; display: grid; gap: 12px; }
 .doctor-points li {
   display: flex;
@@ -706,7 +706,7 @@ p { color: var(--ink-soft); }
   box-shadow: var(--shadow-gold);
 }
 .approach-card h3 { margin-bottom: 10px; font-size: 1.2rem; }
-.approach-card p { font-size: 0.92rem; text-align: justify; text-justify: inter-word; hyphens: auto; }
+.approach-card p { font-size: 0.92rem; text-align: left; text-justify: inter-word; hyphens: manual; }
 
 /* ---------- Reviews ---------- */
 .reviews-grid {
@@ -1186,7 +1186,7 @@ p { color: var(--ink-soft); }
   align-items: center;
 }
 .location-copy h2 { margin-bottom: 16px; }
-.location-copy > p { text-align: justify; text-justify: inter-word; hyphens: auto; }
+.location-copy > p { text-align: left; text-justify: inter-word; hyphens: manual; }
 .location-list { list-style: none; margin: 24px 0 30px; display: grid; gap: 14px; }
 .location-list li {
   display: flex;
@@ -1285,9 +1285,9 @@ p { color: var(--ink-soft); }
 .areas-served p {
   font-size: 0.96rem;
   max-width: 760px;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
 }
 .area-chips {
   list-style: none;
@@ -1344,7 +1344,7 @@ p { color: var(--ink-soft); }
 .faq-icon::before { top: 9px; left: 0; width: 20px; height: 2px; }
 .faq-icon::after { top: 0; left: 9px; width: 2px; height: 20px; }
 .faq-list details[open] .faq-icon::after { transform: rotate(90deg); opacity: 0; }
-.faq-list details p { padding: 0 0 20px; font-size: 0.96rem; color: var(--ink-soft); max-width: 92%; text-align: justify; text-justify: inter-word; hyphens: auto; }
+.faq-list details p { padding: 0 0 20px; font-size: 0.96rem; color: var(--ink-soft); max-width: 92%; text-align: left; text-justify: inter-word; hyphens: manual; }
 
 /* ---------- Doctor's Insights page ---------- */
 .insights-hero {
@@ -1441,9 +1441,9 @@ p { color: var(--ink-soft); }
 .condition-hero h1 { margin: 8px 0 20px; }
 .condition-lead {
   font-size: 1.12rem;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
   max-width: 560px;
 }
 .condition-hero-actions {
@@ -1488,9 +1488,9 @@ p { color: var(--ink-soft); }
 /* Prose blocks (justified, as requested) */
 .care-prose { max-width: 760px; }
 .care-prose p {
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
   margin-bottom: 16px;
   font-size: 1.02rem;
 }
@@ -1714,9 +1714,9 @@ p { color: var(--ink-soft); }
   color: var(--ink-soft);
   font-size: 1rem;
   line-height: 1.72;
-  text-align: justify;
+  text-align: left;
   text-justify: inter-word;
-  hyphens: auto;
+  hyphens: manual;
 }
 .legal-body p { margin-bottom: 14px; }
 .legal-body ul { margin: 6px 0 18px; padding-left: 1.2rem; display: grid; gap: 9px; }
@@ -1956,9 +1956,9 @@ p { color: var(--ink-soft); }
   .location-copy > p,
   .review-card blockquote,
   .section-heading > p {
-    text-align: justify;
+    text-align: left;
     text-justify: inter-word;
-    hyphens: auto;
+    hyphens: manual;
   }
 }
 
