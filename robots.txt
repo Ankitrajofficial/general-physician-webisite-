@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ankitrajofficial.github.io/dr_ajit_kishore/sitemap.xml
+Sitemap: https://www.drajitkishor.com/sitemap.xml
